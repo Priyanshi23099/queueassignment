@@ -1,0 +1,40 @@
+class MyQueue:
+
+    def __init__(self):
+        self.queue = []
+        self.front = self.rear = 0
+        self.size = 100
+
+
+
+    def push(self, x: int) -> None:
+        if(self.size == self.rear):
+            return 
+        else:
+            self.queue.append(x)
+            self.rear += 1
+    
+        
+
+    def pop(self) -> int:
+        if(self.front == self.rear):
+            return 
+ 
+        else:
+            y = self.queue.pop(0)
+            self.front+= 1
+            return(y)
+        
+
+    def peek(self) -> int:
+        return self.queue[0]
+         
+
+        
+
+    def empty(self) -> bool:
+         if(self.front == self.rear):
+            return True
+
+        
+
